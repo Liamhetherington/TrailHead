@@ -1,23 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, SafeAreaView, ScrollView } from 'react-native';
-import { createDrawerNavigator, createAppContainer, DrawerItems, createStackNavigator, createMaterialTopTabNavigator} from 'react-navigation';
+import { createDrawerNavigator, createAppContainer, DrawerItems} from 'react-navigation';
 import { Header } from 'react-native-elements';
 import HomeScreen from './screens/HomeScreen';
 import ExploreScreen from './screens/ExploreScreen';
 import PlanScreen from './screens/PlanScreen';
+import TipsScreen from './screens/TipsScreen';
 
 
 export default class App extends React.Component {
   render() {
     return (
-      <View>
-        <Header
-          leftComponent={{ icon: 'menu', color: '#fff' }}
-          centerComponent={{ text: 'TrailHead', style: { color: '#fff' } }}
-          rightComponent={{ icon: 'home', color: '#fff' }}
-        />
         <DrawerNavigator />
-      </View>  
     )
   }
 }
@@ -37,7 +31,8 @@ const AppDrawerNavigator = createDrawerNavigator(
   {
     Home: HomeScreen,
     Explore: ExploreScreen,
-    Planner: PlanScreen
+    Planner: PlanScreen,
+    Tips: TipsScreen
   }, 
   {
     contentComponent: CustomDrawerComponent

@@ -3,9 +3,8 @@ import { Text, ImageBackground, StyleSheet, View, Image } from 'react-native';
 const HomeScreen = () => (
   <ImageBackground source={require('.././images/falls.jpg')} style={{width:'100%', height:'100%', justifyContent: 'center', alignItems: 'center'}}>
     <View style={styles.logo}>
-     <Image source={require('.././images/TrailHeadBlack.png')} style={{ height: 200, width: 200}}/>
+     <Image source={require('.././images/TrailHeadBlack.png')} style={{ height: 400, width: 400}}/>
     </View>
-    <Text style={styles.welcome}>Hello from the home screen!</Text>
   </ImageBackground>
 )
 
